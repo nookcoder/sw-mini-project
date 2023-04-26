@@ -76,3 +76,13 @@
 #swift-tag {
   background-color: #F6D189;
 }
+.grid {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-row-gap: 1cm;
+}
+
+.card{
+  padding: 4rem;
+  border: 2px solid #ccc
+}
