@@ -1,0 +1,30 @@
+
+
+.About{
+}
+
+.Header{
+    background-color: black;
+}
+
+#test{
+    color: white;
+}
+.Bar{
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 60px;
+    margin-left: 100px;
+    margin-right: 100px;
+    align-items: center;
+
+}
+
+.logoWord{
+    color: white;
+    margin-bottom: 30px;
+    font-weight: bold;
+
+}
