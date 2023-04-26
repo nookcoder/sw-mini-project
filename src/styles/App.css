@@ -46,7 +46,7 @@
 }
 .Cell-Image {
   width: 250px;
-  height: 120px;
+  height: 200px;
   object-fit: cover;
   border-radius: 15px 15px 0px 0px;
 }
@@ -70,12 +70,16 @@
   font-size: small;
   font-weight: 600;
 }
-#frontend-tag {
+#framework-tag {
   background-color: #9FF689;
 }
-#swift-tag {
+#language-tag {
   background-color: #F6D189;
 }
+#library-tag {
+  background-color: #FFFF39;
+}
+
 
 @media screen and (min-width: 600px) {
   .grid {

@@ -3,25 +3,93 @@ import { useNavigate } from 'react-router';
 import { writeUserData } from '../modules/firebase/writer';
 import imgLogo from '../images/sample.png'
 import WebLogo from '../images/WebLogo.svg'
+import reactLogo from '../images/react.png'
+import springLogo from '../images/spring.png'
+import numpyLogo from '../images/numpy.png'
+import nodejsLogo from '../images/nodejs.png'
+import djangoLogo from '../images/django.png'
+import javascriptLogo from '../images/javascript.png'
+import javaLogo from '../images/java.png'
+import pythonLogo from '../images/python.png'
+import nestLogo from '../images/nestjs.png'
+var qq = [
+  {
+    "name": "react",
+    "tags": ["library"],
+    "img": reactLogo
+  },
+  {
+    "name": "nodejs",
+    "tags": ["library"],
+    "img": nodejsLogo
+  },
+  {
+    "name": "numpy",
+    "tags": ["library"],
+    "img": numpyLogo
+  },
+  {
+    "name": "spring",
+    "tags": ["framework"],
+    "img": springLogo
+  },
+  {
+    "name": "nestjs",
+    "tags": ["framework"],
+    "img": nestLogo
+  },
+  {
+    "name": "django",
+    "tags": ["framework"],
+    "img": djangoLogo
+  },
+  {
+    "name": "javascript",
+    "tags": ["language"],
+    "img": javascriptLogo
+  },
+  {
+    "name": "java",
+    "tags": ["language"],
+    "img": javaLogo
+  },
+  {
+    "name": "python",
+    "tags": ["language"],
+    "img": pythonLogo
+  }
+]
 
-function Card() {
+function generateTags(tags) {
+  var arr = []
+  for(let i = 0 ; i < tags.length; i++) {
+    var id = tags[i] + "-tag"
+    arr.push(
+      <div className='Tag' id={id}>{tags[i]}</div>
+    )
+  }
+
+  return arr
+}
+
+function Card(props) {
   const navigator = useNavigate();
   const moveToAbout = () => {
-    navigator('/about');
+    navigator('/detail/' + props.name);
     writeUserData();
   };
+  
   return (
     <div className="App">
       {/* <div>메인 화면 여기서 짜시면 됩니다.</div>
     <button onClick={moveToAbout}>페이지이동예시</button> */}
 
       <div className='Cell' onClick={moveToAbout}>
-        <img src={imgLogo} alt='framework' className='Cell-Image' />
+        <img src={props.img} alt='framework' className='Cell-Image' />
         <div className='Cell-Description'>
-          <div className='Cell-Title'>Framework</div>
+          <div className='Cell-Title'>{props.name}</div>
           <div className='Tag-Space'>
-            <div className='Tag' id='frontend-tag'>Frontend</div>
-            <div className='Tag' id='swift-tag'>Swift</div>
+            {generateTags(props.tags)}
           </div>
         </div>
       </div>
@@ -52,8 +120,11 @@ function generateCard() {
   let arr = []
 
   for (let i = 0; i < 9; i++) {
+    var data = qq[i]
+    var name = data.name
+    var tags = data.tags
     arr.push(
-      <Card className="card"></Card>
+      <Card className="card" name={name} tags={tags} img={data.img}></Card>
     )
   }
 
