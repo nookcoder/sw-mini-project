@@ -1,15 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './CommentTextField.module.css';
 import {Button} from "@mui/material";
 import StarIcon from '@mui/icons-material/Star';
+import {renderStars} from "./Starts";
 
 const CommentTextField = () => {
+    const [starCount, setStartCount] = useState(0);
     return (
         <div className={styles.container}>
             <div className={styles.title}>기술 평가</div>
             <div className={styles.total_description}>
-                <span>{renderStars(3)}</span>
-                <span className={styles.total_score}>3.0</span>
+                <span>{renderStars(starCount)}</span>
+                <span className={styles.total_score}>{starCount}.0</span>
                 <span className={styles.divider}></span>
                 <span className={styles.total_score}>5개 평가</span>
             </div>
@@ -20,25 +22,5 @@ const CommentTextField = () => {
         </div>
     );
 };
-
-function renderStars(startCount) {
-    const starts = [];
-    for(let i=0; i<startCount; i++) {
-        starts.push(<span><StarIcon color={'primary'} fontSize={'large'}/></span>);
-    }
-    for(let i=0; i<5-startCount; i++) {
-        starts.push(<span><StarIcon color={'disabled'} fontSize={'large'}/></span>);
-    }
-    return (
-        <span>
-            {
-                starts.map((starIcon) => (
-                    starIcon
-                ))
-            }
-        </span>
-    )
-
-}
 
 export default CommentTextField;
