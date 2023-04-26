@@ -32,7 +32,7 @@ function Card() {
 function generateCard() {
   let arr = []
 
-  for(let i = 0; i < 9; i++) {
+  for (let i = 0; i < 9; i++) {
     arr.push(
       <Card className="card"></Card>
     )
@@ -49,6 +49,10 @@ function App() {
   };
   return (
     <div className="App">
+      <div className="text">
+        <h2 className="subject">Web 제목</h2>
+        <h3 className="description">부가설명</h3>
+      </div>
       {/* <div>메인 화면 여기서 짜시면 됩니다.</div>
       <button onClick={moveToAbout}>페이지이동예시</button> */}
       <div className="grid">

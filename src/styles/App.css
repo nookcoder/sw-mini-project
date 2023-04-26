@@ -77,6 +77,8 @@
   background-color: #F6D189;
 }
 .grid {
+  margin-left: 1cm;
+  margin-top: 1cm;
   display: grid;
   grid-template-columns: 300px 300px 300px;
   grid-row-gap: 1cm;
@@ -85,4 +87,8 @@
 .card{
   padding: 4rem;
   border: 2px solid #ccc
+}
+
+.text {
+  margin-left: 1cm;
 }
