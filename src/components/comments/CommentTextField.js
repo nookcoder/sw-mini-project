@@ -5,13 +5,13 @@ import StarIcon from '@mui/icons-material/Star';
 import RenderStars from "./Stars";
 
 const CommentTextField = () => {
-    const [starCount, setStarCount] = useState(0);
+    const [score, setScore] = useState(0);
     return (
         <div className={styles.container}>
             <div className={styles.title}>기술 평가</div>
             <div className={styles.total_description}>
-                <span>{RenderStars(starCount)}</span>
-                <span className={styles.total_score}>{starCount}.0</span>
+                <span>{RenderStars(score, setScore)}</span>
+                <span className={styles.total_score}>{score}.0</span>
                 <span className={styles.divider}></span>
                 <span className={styles.total_score}>5개 평가</span>
             </div>
