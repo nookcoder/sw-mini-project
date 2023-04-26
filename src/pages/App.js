@@ -2,6 +2,7 @@ import '../styles/App.css';
 import { useNavigate } from 'react-router';
 import { writeUserData } from '../modules/firebase/writer';
 import imgLogo from '../images/sample.png'
+import WebLogo from '../images/WebLogo.svg'
 
 function Card() {
   const navigator = useNavigate();
@@ -29,6 +30,24 @@ function Card() {
   );
 }
 
+function Header() {
+  return (
+    <header className='Header'>
+      <div className='Header-Desc'>
+        <a href='/'><img src={WebLogo} alt='logo' className='Header-Logo' /></a>
+        <h1 className='Header-Title'><a href='/'>somacritic</a></h1>
+      </div>
+      <nav className='Header-Items'>
+        <ul>
+          <li><a href="https://ko.wikipedia.org/wiki/%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC">Framework</a></li>
+          <li><a href="https://ko.wikipedia.org/wiki/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC_(%EC%BB%B4%ED%93%A8%ED%8C%85)">Library</a></li>
+          <li><a href="https://ko.wikipedia.org/wiki/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4">Language</a></li>
+        </ul>
+      </nav>
+    </header>
+  );
+}
+
 function generateCard() {
   let arr = []
 
@@ -42,25 +61,12 @@ function generateCard() {
 }
 
 function App() {
-  const navigator = useNavigate();
-  const moveToAbout = () => {
-    navigator('/about');
-    writeUserData();
-  };
   return (
     <div className="App">
-      <div className="text">
-        <h2 className="subject">Web 제목</h2>
-        <h3 className="description">부가설명</h3>
-      </div>
-      {/* <div>메인 화면 여기서 짜시면 됩니다.</div>
-      <button onClick={moveToAbout}>페이지이동예시</button> */}
+      {Header()}
       <div className="grid">
         {generateCard()}
       </div>
-
-
-
     </div>
   );
 }
