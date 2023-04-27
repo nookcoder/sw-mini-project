@@ -16,7 +16,7 @@ const CommentTextField = ({setComments, type}) => {
     const sendComments = async () => {
         await writeComments(starCount, comment, type);
         setComment("");
-        const commentsFromDB = await getComments();
+        const commentsFromDB = await getComments(type);
         const comments = []
         for (let comment in commentsFromDB) {
             comments.push(commentsFromDB[comment]);
