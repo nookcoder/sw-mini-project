@@ -1,6 +1,7 @@
 import '../styles/App.css';
 import { useNavigate } from 'react-router';
 import { writeUserData } from '../modules/firebase/writer';
+import CommentTextField from '../components/comments/CommentTextField';
 
 function App() {
   const navigator = useNavigate();
