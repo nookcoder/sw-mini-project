@@ -1,0 +1,32 @@
+.container {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #C9C9C9;
+    max-width: 1000px;
+}
+.box {
+    display: flex;
+    align-items: center;
+}
+
+.right_column {
+    margin-left: 10px;
+}
+
+.stars_row {
+    margin-top: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.stars_row_text {
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.comment_box {
+    margin-top: 25px;
+}
+
+.comment {
+    font-size: 18px;
+}

@@ -1,12 +1,10 @@
 import '../styles/App.css';
 import { useNavigate } from 'react-router';
-import { writeUserData } from '../modules/firebase/writer';
 
 function App() {
   const navigator = useNavigate();
   const moveToAbout = () => {
     navigator('/about');
-    writeUserData();
   };
   return (
     <div className="App">
