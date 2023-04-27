@@ -1,7 +1,7 @@
 import React from 'react';
 import PersonIcon from '@mui/icons-material/Person';
 import {Avatar} from "@mui/material";
-import {renderStars} from "./Starts";
+import {renderStars} from "./StartsComments";
 import styles from './CommentBox.module.css';
 
 const CommentBox = () => {

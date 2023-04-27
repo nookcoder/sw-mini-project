@@ -47,6 +47,8 @@
 .input_styles {
     border:none;
     font-size: 18px;
+    flex-grow: 1;
+    padding-right: 10px;
 }
 
 .input_styles:active, .input_styles:focus{
