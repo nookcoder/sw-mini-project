@@ -12,7 +12,7 @@ const About = () => {
       </header>
       <div className='MainContent'>
         <div className='Content'>
-          <img src='img/somacritic.png'  id='mainImg'></img>
+          <img src='img/logo192.png'  id='mainImg'></img>
           <div className='substance'>
             <div className='Title'>
               <text className='TitleName'>React</text>
@@ -23,10 +23,10 @@ const About = () => {
                 This package provides a wrapper around Dart implementations of SVG parsing, including SVG path data. In particular, it provides efficient BytesLoader implementations for package:vector_graphics. This package is easier to use but not as performant as using the vector_graphics and vector_graphics_compiler packages directly. Those packages allow you to do ahead-of-time compilation and optimization of SVGs, and offer some more performant rasterization strategies at runtime. 
             </div>
             <div className='Tags'>
-              <Chip label="Clickable Link" component="a" href="#basic-chip" clickable />
-              <Chip label="Clickable Link" component="a" href="#basic-chip" clickable />
+              <Chip id='Chip' label="Django" component="a" href="#basic-chip" variant="outlined" clickable  />
+              <Chip id='Chip' label="Django" component="a" href="#basic-chip" clickable />
 
-              <Chip label="Clickable Link" component="a" href="#basic-chip" clickable />
+              <Chip id='Chip' label="Django" component="a" href="#basic-chip" clickable />
 
             
             
