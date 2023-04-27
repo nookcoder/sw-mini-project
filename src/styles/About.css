@@ -1,15 +1,11 @@
 
 
 .About{
+    
 }
 
-.Header{
-    background-color: black;
-}
 
-#test{
-    color: white;
-}
+
 .Bar{
     padding: 20px;
     display: flex;
@@ -27,4 +23,53 @@
     margin-bottom: 30px;
     font-weight: bold;
 
+}
+
+.MainContent{
+    background-color: rgb(41, 169, 95);
+    width: auto;
+    height: 1000px;
+    margin: 50px 500px 50px 500px;
+
+}
+
+.Content{
+    width: auto;
+    background-color: aqua;
+    margin-top: 100px;
+    position: absolute;
+
+    height: 800px;
+    display: flex;
+
+}
+
+#mainImg{
+    margin-top: 60px;
+    width: 200px;
+    height: 200px;
+}
+.substance{
+    background-color: darkblue;
+    width: auto;
+    height: 400px;
+    margin-left: 50px;
+    
+}
+
+.Title{
+    background-color: beige;
+    width: auto;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.TitleName{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.Summary{
+    word-break: break-all;
 }
