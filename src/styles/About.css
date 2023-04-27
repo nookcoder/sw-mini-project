@@ -1,0 +1,97 @@
+
+
+.About{
+    min-width: 990px;
+    
+    
+}
+
+
+
+.Bar{
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 60px;
+    margin-left: 100px;
+    margin-right: 100px;
+    align-items: center;
+
+}
+
+.logoWord{
+    color: white;
+    margin-bottom: 30px;
+    font-weight: bold;
+
+}
+
+.MainContent{
+    background-color: rgb(41, 169, 95);
+    width: auto;
+    height: 1000px;
+    margin: 50px 500px 50px 500px;
+    overflow: auto;
+
+}
+
+.Content{
+    width: auto;
+    background-color: aqua;
+    margin-top: 100px;
+
+    height: 800px;
+    display: flex;
+
+}
+
+#mainImg{
+    margin-top: 60px;
+    width: 200px;
+    height: 200px;
+}
+.substance{
+    background-color: darkblue;
+    width: auto;
+    height: 400px;
+    margin-left: 50px;
+    
+}
+
+.Title{
+    background-color: beige;
+    width: auto;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.TitleName{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.Summary{
+    word-break: break-all;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.Rating{
+    font-size: 40px;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+#titleStar{
+    margin-left: 20px;
+}
+
+.Tags{
+    margin-top: 20px;
+    width: auto;
+    height: 150px;
+    background-color: white;
+
+}

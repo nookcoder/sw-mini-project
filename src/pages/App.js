@@ -60,6 +60,7 @@ var qq = [
   }
 ]
 
+
 function generateTags(tags) {
   var arr = []
   for(let i = 0 ; i < tags.length; i++) {
@@ -76,7 +77,6 @@ function Card(props) {
   const navigator = useNavigate();
   const moveToAbout = () => {
     navigator('/detail/' + props.name);
-    writeUserData();
   };
   
   return (
