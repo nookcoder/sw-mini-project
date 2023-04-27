@@ -7,6 +7,8 @@ import {useEffect, useState} from "react";
 import {getComments} from "../modules/firebase/reader";
 import {Button} from "@mui/material";
 import {Header} from "./App";
+import ContentBox from "../components/contents/ContentBox";
+import {contents} from '../components/contents/Contents';
 
 const Details = () => {
     const {type} = useParams();
@@ -29,6 +31,9 @@ const Details = () => {
         for (const co of comments) {
             totalScore += co.score;
         }
+        if (totalScore === 0) {
+            return "0.0";
+        }
         return (totalScore / comments.length).toFixed(2);
     }
 
@@ -40,6 +45,7 @@ const Details = () => {
         if(!isInit) {
             initComments();
         }
+        console.log(contents[type].name);
     },[isInit])
 
     return (
@@ -47,7 +53,13 @@ const Details = () => {
             <Header/>
             <div className={styles.container}>
                 <div className={styles.box}>
-                    {/*<ContentBox/>*/}
+                    <ContentBox
+                        imgUrl={contents[type].imageUrl}
+                        name={contents[type].name}
+                        summary={contents[type].summary}
+                        rating={getTotalScore()}
+                        chipName={contents[type].chips}
+                    />
                     <CommentTextField
                         setComments={setComments}
                         type={type}

@@ -3,22 +3,21 @@
 
 .MainContent{
     width: auto;
-    height: 1000px;
-    margin: 50px 500px 50px 500px;
-    overflow: auto;
+    /*height: 1000px;*/
+    /*margin: 50px 500px 50px 500px;*/
+    /*overflow: auto;*/
 
 }
 
 .Content{
     width: auto;
     margin-top: 100px;
-
-    height: 800px;
+    margin-bottom: 100px;
     display: flex;
 
 }
 
-#mainImg{
+.mainImg{
     margin-top: 60px;
     width: 200px;
     height: 200px;
@@ -27,7 +26,7 @@
     width: auto;
     height: 300px;
     margin-left: 50px;
-    
+
 }
 
 .Title{
