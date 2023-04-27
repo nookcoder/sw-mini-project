@@ -5,7 +5,7 @@ import RenderStars from "./Stars";
 import {writeComments} from "../../modules/firebase/writer";
 import {getComments} from "../../modules/firebase/reader";
 
-const CommentTextField = ({setComments}) => {
+const CommentTextField = ({setComments, type, comments}) => {
     const [starCount, setStartCount] = useState(0);
     const [comment, setComment] = useState();
     const onChangeComment = (event) => {
@@ -14,9 +14,10 @@ const CommentTextField = ({setComments}) => {
     }
 
     const sendComments = async () => {
-        await writeComments(starCount, comment);
+        await writeComments(starCount, comment, type);
         setComment("");
-        const commentsFromDB = await getComments();
+        setStartCount(0);
+        const commentsFromDB = await getComments(type);
         const comments = []
         for (let comment in commentsFromDB) {
             comments.push(commentsFromDB[comment]);
@@ -33,7 +34,7 @@ const CommentTextField = ({setComments}) => {
                 <span>{RenderStars(starCount, setStartCount)}</span>
                 <span className={styles.total_score}>{starCount}.0</span>
                 <span className={styles.divider}></span>
-                <span className={styles.total_score}>5개 평가</span>
+                <span className={styles.total_score}>{comments.length}개 평가</span>
             </div>
             <div className={styles.text_field_box}>
                 <input className={styles.input_styles} placeholder={'평가를 입력해주세요'} value={comment} onChange={onChangeComment}/>

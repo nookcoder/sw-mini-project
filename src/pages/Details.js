@@ -6,7 +6,7 @@ import CommentsContainer from "../components/comments/CommentsContainer";
 import {useEffect, useState} from "react";
 import {getComments} from "../modules/firebase/reader";
 import {Button} from "@mui/material";
-import ContentBox from '../components/contents/ContentBox';
+import {Header} from "./App";
 
 const Details = () => {
     const {type} = useParams();
@@ -14,7 +14,7 @@ const Details = () => {
     const [isInit, setIsInit] = useState(false);
 
     const initComments = async () => {
-        const commentsFromDB = await getComments();
+        const commentsFromDB = await getComments(type);
         for (let comment in commentsFromDB) {
             comments.push(commentsFromDB[comment]);
         }
@@ -43,20 +43,22 @@ const Details = () => {
     },[isInit])
 
     return (
-        <div className={styles.container}>
-            <div className={styles.box}>
-                <CommentTextField
-                    setComments={setComments}
-                />
-                <CommentsContainer
-                    comments={comments}
-                />
-                <Button onClick={onClickTest}>Test</Button>
-                <ContentBox>
-                    
-                </ContentBox>
+        <>
+            <Header/>
+            <div className={styles.container}>
+                <div className={styles.box}>
+                    {/*<ContentBox/>*/}
+                    <CommentTextField
+                        setComments={setComments}
+                        type={type}
+                        comments={comments}
+                    />
+                    <CommentsContainer
+                        comments={comments}
+                    />
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 

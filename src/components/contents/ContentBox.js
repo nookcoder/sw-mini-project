@@ -21,7 +21,7 @@ const ContentBox = ({imgUrl, name, rating, summary, chipName}) => {
             </div>
       </div>
 
-        
+
     );
 }
 
