@@ -13,7 +13,7 @@ const Details = () => {
     const [isInit, setIsInit] = useState(false);
 
     const initComments = async () => {
-        const commentsFromDB = await getComments();
+        const commentsFromDB = await getComments(type);
         for (let comment in commentsFromDB) {
             comments.push(commentsFromDB[comment]);
         }
@@ -44,14 +44,15 @@ const Details = () => {
     return (
         <div className={styles.container}>
             <div className={styles.box}>
+                {/*<ContentBox/>*/}
                 <CommentTextField
                     setComments={setComments}
+                    type={type}
                 />
                 <CommentsContainer
                     comments={comments}
                 />
                 <Button onClick={onClickTest}>Test</Button>
-            {/*<ContentBox/>*/}
             </div>
         </div>
     );

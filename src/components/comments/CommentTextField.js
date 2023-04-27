@@ -5,7 +5,7 @@ import RenderStars from "./Stars";
 import {writeComments} from "../../modules/firebase/writer";
 import {getComments} from "../../modules/firebase/reader";
 
-const CommentTextField = ({setComments}) => {
+const CommentTextField = ({setComments, type}) => {
     const [starCount, setStartCount] = useState(0);
     const [comment, setComment] = useState();
     const onChangeComment = (event) => {
@@ -14,7 +14,7 @@ const CommentTextField = ({setComments}) => {
     }
 
     const sendComments = async () => {
-        await writeComments(starCount, comment);
+        await writeComments(starCount, comment, type);
         setComment("");
         const commentsFromDB = await getComments();
         const comments = []
