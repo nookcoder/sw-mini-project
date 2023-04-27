@@ -1,0 +1,21 @@
+.Title{
+    width: auto;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.TitleName{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.Rating{
+    font-size: 40px;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.titleStar{
+    margin-left: 20px;
+}
