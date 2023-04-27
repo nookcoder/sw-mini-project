@@ -6,6 +6,7 @@ import CommentsContainer from "../components/comments/CommentsContainer";
 import {useEffect, useState} from "react";
 import {getComments} from "../modules/firebase/reader";
 import {Button} from "@mui/material";
+import ContentBox from '../components/contents/ContentBox';
 
 const Details = () => {
     const {type} = useParams();
@@ -51,7 +52,9 @@ const Details = () => {
                     comments={comments}
                 />
                 <Button onClick={onClickTest}>Test</Button>
-            {/*<ContentBox/>*/}
+                <ContentBox>
+                    
+                </ContentBox>
             </div>
         </div>
     );

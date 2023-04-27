@@ -1,7 +1,5 @@
 import React, {useEffect} from 'react';
-import PersonIcon from '@mui/icons-material/Person';
-import {Avatar} from "@mui/material";
-import {renderStars} from "./StartsComments";
+import Chip from '@mui/material/Chip'
 import styles from './ContentBox.module.css';
 import {renderTitle} from "./Title"
 
@@ -11,7 +9,7 @@ const ContentBox = ({imgUrl, name, rating, summary, chipName}) => {
             <div className={styles.Content}>
             <img src={imgUrl} className={styles.mainImg}></img>
             <div className={styles.substance}>
-                {renderTitle(name, rating)}
+                <div>{renderTitle(name, rating)}</div>
                 <div className={styles.Summary}>
                     {summary}
                 </div>
