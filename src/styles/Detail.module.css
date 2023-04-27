@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    width: 700px;
+}
+
+@media screen and (max-width: 1000px) {
+    .box {
+        width: 450px;
+    }
+}
