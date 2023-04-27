@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import Chip from '@mui/material/Chip'
 import styles from './ContentBox.module.css';
 import {renderTitle} from "./Title"
+import { renderChips } from './Chips';
 
 const ContentBox = ({imgUrl, name, rating, summary, chipName}) => {
     return(
@@ -14,9 +15,7 @@ const ContentBox = ({imgUrl, name, rating, summary, chipName}) => {
                     {summary}
                 </div>
                 <div className={styles.Tags}>
-                    <Chip className={styles.Chip} label={chipName} component="a" href="#basic-chip" clickable  />
-                    <Chip className={styles.Chip} label={chipName} component="a" href="#basic-chip" clickable />
-                    <Chip className={styles.Chip} label={chipName} component="a" href="#basic-chip" clickable />
+                    {renderChips}
                 </div>
             </div>
             </div>
