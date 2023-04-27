@@ -23,14 +23,12 @@ const About = () => {
                 This package provides a wrapper around Dart implementations of SVG parsing, including SVG path data. In particular, it provides efficient BytesLoader implementations for package:vector_graphics. This package is easier to use but not as performant as using the vector_graphics and vector_graphics_compiler packages directly. Those packages allow you to do ahead-of-time compilation and optimization of SVGs, and offer some more performant rasterization strategies at runtime. 
             </div>
             <div className='Tags'>
-            <Chip label="Clickable Link" component="a" href="#basic-chip" clickable />
-      <Chip
-        label="Clickable Link"
-        component="a"
-        href="#basic-chip"
-        variant="outlined"
-        clickable
-      />
+              <Chip label="Clickable Link" component="a" href="#basic-chip" clickable />
+              <Chip label="Clickable Link" component="a" href="#basic-chip" clickable />
+
+              <Chip label="Clickable Link" component="a" href="#basic-chip" clickable />
+
+            
             
             </div>
           </div>
