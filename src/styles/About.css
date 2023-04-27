@@ -1,6 +1,8 @@
 
 
 .About{
+    min-width: 990px;
+    
     
 }
 
@@ -30,6 +32,7 @@
     width: auto;
     height: 1000px;
     margin: 50px 500px 50px 500px;
+    overflow: auto;
 
 }
 
@@ -37,7 +40,6 @@
     width: auto;
     background-color: aqua;
     margin-top: 100px;
-    position: absolute;
 
     height: 800px;
     display: flex;
@@ -66,10 +68,30 @@
 }
 
 .TitleName{
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 700;
 }
 
 .Summary{
     word-break: break-all;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.Rating{
+    font-size: 40px;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+#titleStar{
+    margin-left: 20px;
+}
+
+.Tags{
+    margin-top: 20px;
+    width: auto;
+    height: 115px;
+    background-color: black;
+
 }
