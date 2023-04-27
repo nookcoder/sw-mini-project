@@ -3,8 +3,9 @@ import styles from './CommentTextField.module.css';
 import {Button} from "@mui/material";
 import RenderStars from "./Stars";
 import {writeComments} from "../../modules/firebase/writer";
+import {getComments} from "../../modules/firebase/reader";
 
-const CommentTextField = () => {
+const CommentTextField = ({setComments}) => {
     const [starCount, setStartCount] = useState(0);
     const [comment, setComment] = useState();
     const onChangeComment = (event) => {
@@ -15,6 +16,14 @@ const CommentTextField = () => {
     const sendComments = async () => {
         await writeComments(starCount, comment);
         setComment("");
+        const commentsFromDB = await getComments();
+        const comments = []
+        for (let comment in commentsFromDB) {
+            comments.push(commentsFromDB[comment]);
+        }
+
+        comments.reverse()
+        setComments(comments);
     }
 
     return (

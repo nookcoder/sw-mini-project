@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -36,3 +36,148 @@
     transform: rotate(360deg);
   }
 }
+
+.Cell {
+  width: 250px;
+  height: 120px;
+}
+.Cell:hover {
+  filter: brightness(75%)
+}
+.Cell-Image {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px 15px 0px 0px;
+}
+.Cell-Description {
+  background-color: #8AC2F7;
+  width: 240px;
+  height: 85px;
+  padding-left: 10px;
+  border-radius: 0px 0px 15px 15px;
+}
+.Cell-Title {
+  font-size: larger;
+  font-weight: bold;
+  padding: 10px 0px 10px 0px;
+}
+.Tag {
+  float: left;
+  border-radius: 7px;
+  padding: 4px 8px 4px 8px;
+  margin-right: 10px;
+  font-size: small;
+  font-weight: 600;
+}
+#framework-tag {
+  background-color: #9FF689;
+}
+#language-tag {
+  background-color: #F6D189;
+}
+#library-tag {
+  background-color: #FFFF39;
+}
+
+
+@media screen and (min-width: 600px) {
+  .grid {
+    grid-template-columns: 300px 300px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .grid {
+    grid-template-columns: 300px 300px 300px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .grid {
+    grid-template-columns: 300px 300px 300px 300px;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .grid {
+    grid-template-columns: 300px 300px 300px 300px 300px;
+  }
+}
+.grid {
+  margin-left: 1cm;
+  margin-top: 1cm;
+  display: grid;
+  grid-row-gap: 1cm;
+}
+
+.card{
+  padding: 4rem;
+  border: 2px solid #ccc
+}
+
+.text {
+  margin-left: 1cm;
+}
+
+
+
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header-Desc {
+  display: flex;
+  align-items: center;
+}
+.Header-Logo {
+  height: 50px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.Header-Title {
+  display: inline;
+  color: white;
+  margin: 0.5rem;
+  padding: 0;
+}
+.Header-Title a {
+  text-decoration: none;
+  color: white;
+}
+
+.Header-Items {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.Header-Items ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.Header-Items li.icon {
+  flex-basis: 25%;
+}
+
+.Header {
+  background: #333333;
+  padding: 20px;
+}
+
+.Header-Items li a {
+  display: block;
+  text-align: center;
+  margin: .25rem;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+.Header-Items li a:hover {
+  color: #8AC2F7;
+}
+
