@@ -5,6 +5,7 @@ import {renderTitle} from "./Title"
 import { renderChips } from './Chips';
 
 const ContentBox = ({imgUrl, name, rating, summary, chipName}) => {
+
     return(
         <div className= {styles.MainContent}>
             <div className={styles.Content}>
@@ -15,7 +16,7 @@ const ContentBox = ({imgUrl, name, rating, summary, chipName}) => {
                     {summary}
                 </div>
                 <div className={styles.Tags}>
-                    {renderChips}
+                    {renderChips(chipName)}
                 </div>
             </div>
             </div>

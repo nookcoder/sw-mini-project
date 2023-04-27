@@ -8,12 +8,13 @@
 .TitleName{
     font-size: 40px;
     font-weight: 700;
+    margin-right: 20px;
 }
 
 .Rating{
     font-size: 40px;
     font-weight: 700;
-    margin-left: 20px;
+    margin-left: 5px;
 }
 
 .titleStar{

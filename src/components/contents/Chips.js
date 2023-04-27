@@ -8,9 +8,9 @@ export function renderChips(chips){
     return(
         <div>
         {chips.map((dish) => (
-            <Chip className={styles.Chip} label={dish.name} component="a" href="#basic-chip" clickable  />
+            <Chip className={styles.Chip} label={dish} component="a" href="#basic-chip" clickable  />
 
-        ))}    
+        ))}
         </div>
     )
 
